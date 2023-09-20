@@ -1,3 +1,3 @@
-A Respositry to Learn MERN Stack from scratch
+<h1> A Repository to Learn MERN Stack from Scratch </h1>
 
-This will start from basics of HTML, CSS and Javascript.
+<p> This will start with the basics of HTML, CSS, and Javascript. </p>
