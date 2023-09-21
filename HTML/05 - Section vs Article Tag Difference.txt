@@ -1,0 +1,3 @@
+section tag helps us to split the page into different sections and can contain 
+many further content while article is used to store content regarding a single thing
+
