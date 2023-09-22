@@ -1,0 +1,7 @@
+Block: 
+	hamesha next line me atay ha
+	Left se right jitni bhi space hoti ha le letay ha
+
+Inline:
+	next line nahi atay
+	content ke hisaab se space letay ha

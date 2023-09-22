@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet, Div, Lists, Anchor Practice</title>
+
+    <style>
+        nav li a:hover{
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--                  Emmet Practice                     -->
+
+    <!--  p>img  : I need img tag within a paragraph    -->
+    <p><img src="" alt=""></p>
+
+    <!--   p>p>p     -->
+    <p>
+    <p>
+    <p></p>
+    </p>
+    </p>
+
+    <!--   article+section :  I need article and section tags seperatly     -->
+    <article></article>
+    <section></section>
+
+    <!--  p{I need para}  kisi bhi Tag me content insert kerna in short     -->
+    <p>I need a paragraph</p>
+    <article>I need an article</article>
+    <section>I need a section</section>
+    <p>lorem7</p>
+    <!--   p>lorem7     -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+
+    <!--  p#para1 : tags with id     -->
+    <p id="para1"></p>
+    <article id="article1"></article>
+
+
+    <!--    p.para :  tags with class   -->
+    <p class="para"></p>
+    <article class="dog"></article>
+
+    <!--   section.para.dog.article  : Multiple classes in short way  -->
+    <section class="para dog article"></section>
+
+    <!--  ul>li*3  lists in short ways    -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <!--     table>(tr>td*3)*3  Tables in short way   -->
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <!--   header+aside+main+aside+foo  -->
+    <header></header>
+    <aside></aside>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
+
+
+    <!--              Div Tag    : used for division->  Generic tags for container/wrapping something                 -->
+    <!-- .wrapper -->
+    <div class="wrapper">
+        <header></header>
+        <aside></aside>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+
+    <div class="container">
+        <section></section>
+        <article></article>
+    </div>
+
+    <div class="myclass">
+
+    </div>
+
+    <!--    div end-->
+
+
+    <!--                        block vs Inline             
+    Block: 
+	    hamesha next line me atay ha
+	    Left se right jitni bhi space hoti ha le letay ha
+
+    Inline:
+	    next line nahi atay
+	    content ke hisaab se space letay ha
+    -->
+    <!--      Examples      -->
+
+    <div style="background-color: aqua;"> This is my first div</div>
+    <div style="background-color: aqua;"> This is my second div</div>
+    <span style="background-color: aqua;"> This is my first span</span>
+    <span style="background-color: aqua;"> This is my second span</span>
+    <p style="background-color: aqua;">This is my first para</p>
+    <p style="background-color: aqua;">This is my Second para</p>
+
+    <!-- to make block element to inline write display: inline in style-->
+    <p style="background-color: aqua; display: inline;">This is my third para</p>
+
+
+
+    <!--                lists practic -->
+    <!-- ul>li*3 -->
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <!-- ul>(li>p)*3 -->
+    <ul>
+        <li>
+            <p>A</p>
+        </li>
+        <li>
+            <p>B</p>
+        </li>
+        <li>
+            <p>C</p>
+        </li>
+    </ul>
+
+    <!-- ul>(li>p>a)*3 -->
+    <ul>
+        <li>
+            <p><a href="">A</a></p>
+        </li>
+        <li>
+            <p><a href="">B</a></p>
+        </li>
+        <li>
+            <p><a href="">C</a></p>
+        </li>
+    </ul>
+
+    <!-- nav>ul>(li>a)*4 -->
+    <nav>
+        <ul style="display: table; width: 20%; text-align: center;  background-color:lightblue;">
+            <li style="display: table-cell;"><a href="">Home</a></li>
+            <li style="display: table-cell;"><a href="">Products</a></li>
+            <li style="display: table-cell;"><a href="">About Us</a></li>
+            <li style="display: table-cell;"><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <nav>
+        <ul style="overflow: hidden;  background-color:lightblue;">
+            <li style="display: inline;"><a href="">Home</a></li>
+            <li style="display: inline;"><a href="">Products</a></li>
+            <li style="display: inline;"><a href="">About Us</a></li>
+            <li style="display: inline;"><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- best way is below-->
+    <!-- refernce : https://www.w3schools.com/css/css_navbar_horizontal.asp     -->
+    <nav>
+        <ul style="padding: 0%;  background-color:red;">
+            <li style="display: inline; float: left;"><a href="" style="padding: 8px; background-color:lightblue;">Home</a></li>
+            <li style="display: inline; float: left;"><a href="" style="padding: 8px; background-color:lightblue;">Products</a></li>
+            <li style="display: inline; float: left;"><a href="" style="padding: 8px; background-color:lightblue;">About Us</a></li>
+            <li style="display: inline; float: right;"><a href="" style="padding: 8px; background-color:lightblue;">Contact Us</a></li>
+        </ul>
+    </nav>
+<br>
+
+    <nav>
+        <ul style="padding: 0%; list-style-type: none; overflow: hidden; background-color:lightcoral">
+            <li style="float: left;"><a href="" style="display:block; padding:  8px; text-decoration: none; color: white;" >Home</a></li>
+            <li style="float: left;"><a href="" style="display:block; padding:  8px; text-decoration: none; color: white;" >Products</a></li>
+            <li style="float: left;"><a href="" style="display:block; padding:  8px; text-decoration: none; color: white;" >About Us</a></li>
+            <li style="float: left;"><a href="" style="display:block; padding:  8px; text-decoration: none; color: white;" >Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+<br><br><br><br><br>
+</body>
+
+</html>
