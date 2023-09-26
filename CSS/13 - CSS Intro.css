@@ -1,0 +1,29 @@
+h1{
+    font-size: larger;
+    color: green !important;
+    text-align: center;
+}
+/* using element name like p, h1, article  */
+p{
+    background-color: beige;
+    width: 60%;
+}
+/* using id */
+#p1{
+    color: red;
+}
+
+/* using class */
+.para{
+    font-family: fantasy;
+}
+/* using group -> you can style multiple elements using comma */
+p,h1{
+    background-color: cadetblue;
+}
+/* using class within a tag */
+p.para{
+    border-style: dashed;
+    padding: 10px;
+    margin-left: 20%;
+}
