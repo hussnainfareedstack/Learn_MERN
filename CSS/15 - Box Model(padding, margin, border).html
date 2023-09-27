@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+
+        /*universal selector is below. best practice is to set padding and margin at start 0. 
+        so that default settings removed for every browser and we follow ours setting only in comming styles */
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            
+        }
+
+        /* what is box sizing and why we set it to border-box for best practice.
+        reference: https://www.w3schools.com/css/css3_box-sizing.asp 
+        box-sizing: border-box;  ans: in this way border and padding size is included in total height and width. 
+        like if border: 5px and padding 10px and we want width to be 50px 
+        then only 35px are added in setting width the remaining are used from padding and border 
+
+        The box-sizing property allows us to include the padding and border in an element's total width and height.
+        If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+        */
+        
+        span{
+            background-color: aquamarine;
+            border: solid 4px red;
+            width: 450px;
+            height: 150px;
+        }
+        /*
+        why height and width not apply in span tag?
+
+        An inline element is an element that's width and height are determined by the content it contains. 
+        Inline elements, such as a <span> , will completely ignore the width and height as well the the top and bottom 
+            margin properties because, well, the content is what determines the dimensions.
+        */
+
+        h1{
+            background-color: aquamarine;
+            
+            border-style: solid;
+            border-width: 4px;
+            border-color: brown;
+            
+            /* short hand notation */
+            border: solid 4px red;
+
+            border-radius: 10px;     /* for edges to make round */
+            border-top-left-radius: 20px;   /* to set specific corner to round*/
+
+            border-top: solid 4px orange;
+            border-left: solid 4px blue;
+
+            width: 450px;
+            /* height: 150px; */
+
+
+            margin: 30px;
+            /* padding: 15px; */    /*this will add on all 4 directions*/
+            /* padding-left: 10px;
+            padding-top: 15px; */   /*this way you can add to your required direction only*/
+
+            /*padding: 10px 20px 10px 20px;*/  /* this way top right bottom left*/
+
+            padding: 10px 20px;         /* this way x-axis(top bottom) and y-axis(right left)*/
+            
+        }
+
+        .para1{
+            background-color: blanchedalmond;
+            border-radius: 10px;
+            border: solid 4px red;
+            width: 450px;
+            height: 150px;
+        }
+        .para2{
+            background-color: beige;
+            border-radius: 10px;
+            border: solid 4px red;
+            width: 450px;
+            height: 150px;
+        }
+        .para3{
+            background-color: burlywood;
+            border-radius: 10px;
+            border: solid 4px red;
+            width: 450px;
+            height: 150px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Welcome to CSS Box Model</h1>
+
+    <span>Welcome to CSS Masterclass span</span>
+
+    <p class="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet animi voluptatibus veritatis deserunt expedita!</p>
+
+    <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam rem itaque aspernatur corporis? 
+        Doloribus optio perferendis, praesentium minus placeat, et quidem hic minima, necessitatibus soluta numquam 
+        obcaecati consequatur odit!</p>
+
+    <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eaque incidunt, unde officia velit aliquid voluptate 
+        praesentium aspernatur. Error, animi. Voluptates sequi veritatis ullam minus culpa eos suscipit expedita ab 
+        accusamus reiciendis, animi voluptatem unde quo non illum cupiditate beatae?</p>
+    
+</body>
+</html>
