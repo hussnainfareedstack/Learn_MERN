@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+         *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            
+        }
+        div{
+            border: 1px solid red;
+            margin: 100px;
+            width: 350px;
+            height: 100px;
+            padding: 20px;
+        }
+        span{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 10px;
+
+            /* to convert from inline to block use below sytax OR VISE VERSA */
+            /* display: block; */
+
+            /* width and height not applied in inline  ==> to allow this use Display: inline-block;  
+                in this way margin also applied on all 4 directions.                                     */
+            Display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Display block  -->
+    <div>Welcome TO CSS Display Property</div>
+    <div>CSS Display Property</div>
+
+    <!-- Display inline 
+        -> take width content size
+        -> comes in existing line
+        -> only left and right margin applied
+        -> padding applied in all 4 directions
+        -> width and height not applied in inline  ==> to allow this use Display: inline-block; 
+            in this way margin also applied on all 4 directions
+    -->
+    <span>Welcome TO CSS Display Property</span>
+    <span>CSS Display Property</span>
+
+</body>
+</html>
