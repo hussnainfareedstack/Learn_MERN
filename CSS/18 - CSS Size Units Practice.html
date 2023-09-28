@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Size Units in Depth: Unlocking the Power of px, %, vw, vh, em, and rem</title>
+
+    <!-- 
+        It's always suggested to use relative sizes rather than absolute(fixed) to make the page responsive.
+        Tip: The em and rem units are practical in creating perfectly scalable layout!
+            * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+
+        absolute : px,                          * Pixels (px) are relative to the viewing device. 
+        relative: em, rem, %, vw,vh
+        refernce: https://www.w3schools.com/cssref/css_units.php 
+    -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;                   /* 1px is 1/96 inch of physical pixel */
+        }
+        .parent{
+            background-color: beige;
+            height: 100vh;                  /* vh: viewport Height*/
+            width: 50vw;                    /* vw: viewport Width*/
+        }
+        .child{
+            background-color: aquamarine;
+            width: 50%;                     /* % size of parent element */
+        }
+
+        .emParent{
+            font-size: 10px;
+        }
+        .emChild{
+            font-size: 10em;        /* in this fontsize will 160px. em size is actually multiply by its parent element size*/
+        }
+
+        .para{
+            font-size: 10rem;       /* rem is multiply by root(<html> ) size. by default root size is 16px*/
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">
+            Child
+        </div>
+    </div>
+
+
+    <div class="emParent">
+        <div class="emChild">
+            I am child in div to div.
+        </div>
+    </div>
+
+
+    <div class="para">
+        I am para.
+    </div>
+
+    
+</body>
+</html>
