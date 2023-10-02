@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox to design layout</title>
+
+    <style>
+        .container{
+            background-color: beige;
+            /* to create FlexBox just make parent to Display:flex */
+            display: flex;
+            /* By default flex direction is row. But you can make it to column or reverse row/col */
+            flex-direction: row-reverse;
+            /* By default flex-wrap is no-wrap. But you can make it wrap. so that when size of screen is reduce boxes wrap. */
+            flex-wrap: wrap;
+            /* to set flex direction and wrap in one line */
+            flex-flow: row nowrap;
+
+            /* Justify-content : for where to place item on main axis. if flex-driection is row then main is horizontal otheriwse vertical */
+            height: 800px;
+            justify-content:center;   /*center, start, end, left, right.  space-around, space-between, space-evenly*/
+            
+            /* align-item : for where to place item on CROSS axis. if flex-driection is row then CROSS is Vertical otheriwse horizontal */
+            align-items: center;        /*start, center, end, stretch, don't have space options */
+            align-content: center;      /*to remove spaces between elements when space is reduced while items wrapped. */
+            /*align-content have these : center, start, end, left, right.  space-around, space-between, space-evenly*/
+            
+            
+
+        }
+        .box{
+            margin: 2px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        #box1{
+            background-color: burlywood;
+
+            /* Flex properties for items 
+               order, Flex-shrink, flex-grow     */
+            order: 10;
+
+            /* Flex shrink properties tell how fast to shrink when nowrap*/
+            flex-shrink: 4;
+            /* Short hand notation: Flex:grow shrink basis */
+            flex: 1 4 500px;
+
+            /* align-self : for where to place item on CROSS axis for individual item. 
+            if flex-driection is row then CROSS is Vertical otheriwse horizontal */
+            align-self: self-end;
+        }
+        
+        #box2{
+            background-color: blue;
+            /* Flex grow properties tell how fast to grow when nowrap*/
+            flex-grow: 5;
+        }
+        
+        #box3{
+            background-color: blueviolet;
+            /* Flex Basis to set inital box size */
+            flex-basis: 400px;
+        }
+        
+        #box4{
+            background-color: brown;
+            order: -1;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+    
+</body>
+</html>
