@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    .container{
+        display: flex;
+        height: 600px;
+        background-color: beige;
+        justify-content: center;
+        
+    }
+    .box{
+        margin: 4px;
+        height: 300px;
+        width: 300px;
+    }
+
+    #box1{
+        display: flex;
+        background-color: darkgoldenrod;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    button{
+        height: 50px;
+        width: 100px;
+    }
+
+    @media (max-width:550px) {
+
+        .container{
+            flex-direction: column;
+        }
+        
+    }
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">
+            <button id="bt1" type="button">Contact Me</button>
+            <button id="bt2" type="button">Hire Me</button>
+        </div>
+        <div class="box" id="box2">
+            <img src="/CSS/17 - 1.JPG" alt="picture" width="300px" height="300px">
+        </div>
+    </div>
+    
+</body>
+</html>
