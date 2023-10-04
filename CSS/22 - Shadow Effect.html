@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Effect</title>
+
+    <style>
+        /* Custom variable decalaration method */
+        :root{
+            /* declared below for global usage */
+            --primaryColor:brown;
+            --custom-width: 450px;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: beige;
+            height: 45em;
+            border: 0.01em solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            background-color: aqua;
+            border: 0.01em solid var(--primaryColor);
+            height: 25em;
+            width: var(--custom-width);   /*variable usage method*/
+            margin: 0.3em;
+            padding: 0.3em;
+            overflow: auto;
+
+            box-shadow: 10px 15px red;    /* x, y, color */
+            /* box-shadow: 10px 15px 10px black; */     /* x, y, blur, color */
+            /* box-shadow: 10px 15px 10px 20px black; */    /* x, y,blur, spread color */
+            /* box-shadow: inset 10px 15px rgba(40,60,70, 0.8); */    /* inset, x, y, color */
+            /* box-shadow: 10px 20px red, 15px 30px blue;  */     /* multiple shadows*/
+
+        }
+    
+        /* text-shadow */
+        #head{
+            /* text-shadow: 2px 3px yellow; */  /*x, y, color*/
+            /* text-shadow: 2px 3px 2px yellow;*/   /* x, y, blur, color */
+            /* text-shadow: yellow 2px 3px;  */     /*color x  y*/
+            text-shadow: yellow 2px 3px 3px;    /*color x y blur*/
+
+        }        
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img src="/CSS/17 - 1.JPG" alt="picture" height="150px" width="150px">
+            <h1 id="head">Welcome to CSS Shadow Effect</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quam quos voluptas facilis dicta nemo totam culpa explicabo quasi neque? Magnam rem assumenda similique. Illum animi velit ab molestiae explicabo corrupti architecto. Nemo quo ipsum totam perferendis necessitatibus provident eos nam repellat excepturi ipsam amet deserunt quos optio, dolor blanditiis exercitationem consectetur dicta odio iure commodi. Ut aliquid perspiciatis nesciunt excepturi corrupti rem sunt quos quaerat iste asperiores labore ex, porro voluptate. Voluptates, voluptatem. Vitae ab recusandae et ducimus enim, incidunt, eum repellendus excepturi 
+                voluptate tempore ad doloribus optio sapiente error perspiciatis eos corrupti distinctio deleniti! At consequatur optio provident!</p>
+        </div>
+    </div>
+    
+</body>
+</html>
