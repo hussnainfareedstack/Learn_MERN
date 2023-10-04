@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Practice</title>
+
+    <!-- References:
+            1. https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+            2. https://www.w3schools.com/css/css3_animations.asp
+    -->
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: beige;
+            height: 100vh;
+            width: 100vw;
+            border: 3px solid black;
+        }
+
+        .box{
+            width: 10vw;
+            height: 40px;
+            margin: 5vw;
+            background-color: brown;
+            border: 1px solid black;
+            border-radius: 4px;
+
+            position: relative;
+            /*animation-name: rightMove;
+            animation-duration: 5s;
+            animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            animation-delay:3s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-fill-mode: forwards; */
+            /* animation-play-state: running; */
+
+                /* ShortHand Notation */
+            /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s 3 alternate forwards running rightMove;
+            /* animation: rightMove 3s ease-in 1s 2 reverse both running; */
+
+            /* @keyframes duration | easing-function | delay | name */
+            /* animation: 3s linear 1s rightMove; */
+
+            /* two animations */
+            /* animation:
+            3s linear rightMove,
+            3s ease-out 5s leftMove; */
+
+        }
+        @keyframes rightMove {
+            from{
+                /* top: 0; */
+                left: 0;
+            }
+
+            to{
+                /* top: 0; */
+                left: 70vw;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+    
+</body>
+</html>
