@@ -23,10 +23,10 @@
             border: 3px solid black;
         }
 
-        .box{
+        .upperBox{
             width: 10vw;
             height: 40px;
-            margin: 5vw;
+            margin: 1vw;
             background-color: brown;
             border: 1px solid black;
             border-radius: 4px;
@@ -43,7 +43,7 @@
 
                 /* ShortHand Notation */
             /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-            animation: 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s 3 alternate forwards running rightMove;
+            animation: 20s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s infinite alternate forwards running rightMove;
             /* animation: rightMove 3s ease-in 1s 2 reverse both running; */
 
             /* @keyframes duration | easing-function | delay | name */
@@ -60,22 +60,83 @@
                 /* top: 0; */
                 left: 0;
             }
-
             to{
                 /* top: 0; */
-                left: 70vw;
+                left:85vw;
             }
         }
+
+        .ball{
+            height: 50px;
+            width: 50px;
+            border: 1px solid red;
+            border-radius:30px;
+            background-color: yellow;
+            position: relative;
+            
+            animation: ballMove 20s linear 3s infinite normal forwards;
+        }
+
+        @keyframes ballMove {
+            0%{
+                top: 3%;
+                left: 5%;
+                background-color: red;
+            }
+            25%{
+                top: 3%;
+                left: 90%;
+                background-color: green;
+            }
+            50%{
+                top: 75%;
+                left: 90%;
+                background-color: blue;
+            }
+            75%{
+                top: 75%;
+                left: 5%;
+                background-color: red;
+            }
+            
+            100%{
+                top: 3%;
+                left: 5%;
+            }
+            
+        }
         
+        .bottomBox{
+            width: 10vw;
+            height: 40px;
+            margin: 1vw;
+            background-color: brown;
+            border: 1px solid black;
+            border-radius: 4px;
+
+            position: relative;
+            animation: 20s cubic-bezier(0.445, 0.05, 0.55, 0.95) 3s infinite alternate forwards running leftMove;
+
+        }
+        @keyframes leftMove {
+            from{
+                top: 73vh;
+                left: 85vw;
+            }
+            to{
+                top: 73vh;
+                left: 0;
+            }
+        }
 
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="box">
-
-        </div>
+        <div class="upperBox"></div>
+        <div class="ball"></div>
+        <div class="bottomBox"></div>
     </div>
     
 </body>
