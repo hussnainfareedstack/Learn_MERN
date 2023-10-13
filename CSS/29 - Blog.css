@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(242, 242, 242, 0.904);
+    padding: 1rem;
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+header{
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 1rem; */
+    gap: 1rem;
+}
+#description{
+    width: 50%;
+    text-align: center;
+}
+main{
+    /* width: 80%; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    gap: 1rem;
+}
+.card{
+    width: 15rem;
+    height: 20rem;
+    border-radius: 0.4rem;
+    border: 0.01rem solid black;
+    
+}
+.cardImg{
+    width: 15rem;
+    height: 10rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+.cardInfo{
+    padding: 1rem;
+    width: 15rem;
+    height: 10rem;
+}
+#cardTitle{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+#cardDescription{
+    margin-top: 0.4rem;
+    font-size: small;
+}
+
+.authorInfo{
+    margin-top: 1.2rem;
+    display: flex;
+    /* height: 3rem; */
+    align-items: center;
+}
+.authorInfo img{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: rgba(212, 209, 209, 0.881);
+    border-radius: 1rem;
+}
+.NameDate{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.4rem;
+}
+.NameDate #name{
+    color: blue;
+    font-size: smaller;
+}
+.NameDate #date{
+    color: gray;
+    font-size: small;
+}
+#categoryName{
+    margin-left: 1.7rem;
+    padding: 0.2rem;
+    border: 0.01rem solid black;
+    font-size: small;
+}
+
