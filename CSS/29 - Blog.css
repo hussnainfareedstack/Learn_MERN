@@ -5,17 +5,19 @@
 }
 
 .container{
-    width: 100vw;
+    /* max-width: 75%; */
     min-height: 100vh;
+    padding: 2rem 1rem;  /*top-bottom left-right*/
+    margin: 0 auto;
     background-color: rgba(242, 242, 242, 0.904);
-    padding: 1rem;
-    gap: 4rem;
-    display: grid;
+    
+    /* gap: 4rem; */
+    /* display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 5fr; */
 }
 header{
-    width: 80%;
+    /* width: 80%; */
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -26,36 +28,83 @@ header{
 #description{
     width: 50%;
     text-align: center;
+    margin-bottom: 3rem;
 }
 main{
-    /* width: 80%; */
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    justify-self: center;
-    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    margin: 0 auto;
+    gap: 1.5rem;
 }
+@media (min-width:1410px) {
+    main{
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+    }
+}
+@media (min-width:950px) and (max-width:1410px) {
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+    }
+}
+@media (min-width:600px) and (max-width:950px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        width: 95%;
+    }
+}
+
 .card{
-    width: 15rem;
-    height: 20rem;
+    /* width: 15rem;
+    height: 20rem; */
     border-radius: 0.4rem;
     border: 0.01rem solid black;
-    
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+.img_container{
+    /* position: relative; */
+    overflow: hidden;
+    height: 10rem;
 }
 .cardImg{
-    width: 15rem;
-    height: 10rem;
+    /* width: 14.98rem;
+    height: 10rem; */
+    /* object-fit: cover;
+    object-position: center;
+    position: absolute;*/
+    height: 100%;
+    width: 100%; 
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
+
+    transition: all 0.5s ease-in-out;
+    
+}
+.card:hover .cardImg{
+    transform: scale(1.2);
+    
 }
 .cardInfo{
     padding: 1rem;
-    width: 15rem;
-    height: 10rem;
+    /* width: 15rem;
+    height: 10rem; */
+}
+.cardInfo a{
+    text-decoration: none;
 }
 #cardTitle{
     font-size: 1rem;
     font-weight: bolder;
+    color: rgb(13, 13, 13);
+}
+#cardTitle:hover{
+    color: rgba(31, 31, 212, 0.981);
 }
 #cardDescription{
     margin-top: 0.4rem;
@@ -65,10 +114,15 @@ main{
 .authorInfo{
     margin-top: 1.2rem;
     display: flex;
-    /* height: 3rem; */
+    justify-content: space-between;
     align-items: center;
 }
-.authorInfo img{
+.author_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3rem;
+}
+.author_container img{
     width: 1.8rem;
     height: 1.8rem;
     background-color: rgba(212, 209, 209, 0.881);
@@ -77,7 +131,6 @@ main{
 .NameDate{
     display: flex;
     flex-direction: column;
-    margin-left: 0.4rem;
 }
 .NameDate #name{
     color: blue;
@@ -88,7 +141,6 @@ main{
     font-size: small;
 }
 #categoryName{
-    margin-left: 1.7rem;
     padding: 0.2rem;
     border: 0.01rem solid black;
     font-size: small;
