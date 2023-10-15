@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid: Auto-fit, MinMax, Template Areas</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            background-color: rgb(174, 186, 196);
+            
+            display: grid;
+            /* grid-template-columns: repeat(4,1fr); */
+
+            /* Auto-fit: adjust colums automatically , MinMax: size-range */
+            /* MinMax(min-width, max-width) */
+            grid-template-columns: repeat(Auto-fit,MinMax(10rem, 15rem));
+            justify-content: center;
+            /* MinMax(min-height, max-height) */
+            grid-template-rows: repeat(Auto-fit,MinMax(8rem, 13rem));
+            
+        }
+        .item{
+            border: 0.01rem solid black;
+            margin: 0.6rem;
+            padding: 0.5rem;
+            background-color: rgb(167, 157, 145);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+    
+</body>
+</html>

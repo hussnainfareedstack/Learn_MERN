@@ -31,14 +31,20 @@ header{
     margin-bottom: 3rem;
 }
 main{
-    width: 90%;
+    /* width: 90%; */
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+
+    /* Grid auto-response */
+    grid-template-columns: repeat(Auto-fit,MinMax(18rem, 19rem));
+    justify-content: center;
+    /* grid-template-rows: repeat(Auto-fit,MinMax(18rem,24rem)); */
+
     /* grid-template-rows: repeat(2, 1fr); */
     margin: 0 auto;
     gap: 1.5rem;
 }
-@media (min-width:1410px) {
+/* @media (min-width:1410px) {
     main{
         grid-template-columns: repeat(4, 1fr);
         width: 80%;
@@ -55,7 +61,7 @@ main{
         grid-template-columns: repeat(2, 1fr);
         width: 95%;
     }
-}
+} */
 
 .card{
     /* width: 15rem;
