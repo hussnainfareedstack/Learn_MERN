@@ -5,26 +5,64 @@
 
     ○ word vs keyword : 
         ● word jis ka koi meaning nai ha interprator me, like chacha, good. 
-        ● keyword: jis ka meaning ho interprator me like for, is else, var, let, etc.
+        ● keyword: jis ka meaning ho interprator me like for, if else, var, let, etc.
 
 //======================================================================================//
     ○ variables and constants: 
         ● variables joh change ho sakte.
-        ● contants joh change nahi hotay.
+        ● constants joh change nahi hotay.
 
 //======================================================================================//
     ○ var const let:
-        ● var and let used to create variables, var apne apko window object me add kerta ha jabke let nai add kerta. it's mean let provide some security and privacy.
+        ● var is available in ES5 and let and const introduced in ES6
+
+    ○● the difference
+        ● var and let used to create variables, var apne apko window object me add kerta ha jabke let and const nai add kerta. it's mean let and const provide some security and privacy.
+        ● var function scoped hota ha.
+        ● let braces scoped hota ha
+        {
+            function abcd(){
+                for(var i=1; i<12; i++)
+                {
+                    console.log(i);
+                }
+                console.log(i); // var is accessible here also. var apne parent function me kahi bhi access ho sakta ha. to avoid this let can be used and this console.log(i) will show error i not defined, as obvious.
+            }
+        }
+
+    ○● window object
+        ● JS me kuch cheezay nahi ha mgar hum woh use kertay ha. joh ke browser me hoti ha. browser me ek object me woh cheezay hoti ha jesay window kahtay ha. like console.log(), alert, prompt, etc. 
+        ● to see all these window object feature type in browser console: window. and after that expand it to see all features.
 
 //======================================================================================//
-    ○● the difference
-    ○● window object
+
     ○● browser context API
+        ● Browser context API gives mainly 3 things which are "window, stack, heap". window is described above. let discuss other 2.
     ○● stack
+        ● Simple first in last out. joh pehlay aye gha woh last me jayegha
     ○● heap memory
+        ● Jitna bhi data hota ha code ma yah intermediate data during code running, it saves in heap(dynamic) memory.
+
+//======================================================================================//
+
     ○● execution context
+        ● Jab bhi koi function run hota ha toh woh apna imaginary container bna leta ha, jis me 3 cheezay hoti ha.
+            1) variables
+            2) functions inside that function
+            3) lexical environment.
+        iss imaginary container koh execution context kehtay ha.
+
     ○● lexical environment
-    
+        ● func kin cheezo koh access ker sakta ha kin koh nai.
+        {
+            function abcd(){
+                var a= 2;
+                function def(){
+                    var b=4;
+                }
+                // abcd() cannot acces b here due to lexical environment restriction, also var b is func scoped.
+            }
+        }
 
 //======================================================================================//
     ○ hoisting:
@@ -78,7 +116,17 @@
 //======================================================================================//
 
     ○● how to copy reference values
-        ●
+        ● we can copy with the help of Spread Operator ...
+        {
+            var a = [1,2,3,4];
+            var b = [...a]; 
+            // spread operator ... ke baad joh bhi likha ha us ki values koh copy kro or spread operator ki jagah rakh do.
+        }
+        ● Same way we can also copy objects
+        {
+            var obj = {name: Hussnain, age:27};
+            var copyObj = {...obj};             // but we have to use array brackets.
+        }
 
 //======================================================================================//
 
@@ -97,12 +145,23 @@
 //======================================================================================//
 
     ○● truthy vs falsy
-        ●
+        ●   JS me values truthy ya falsy ki basis per divide hoti ha
+            ●● Falsy values are 0, false, undefined, null, NaN, document.all. 
+            ●● everything else is truthy so if(-1), if("apple") are true and this condition will execute.
 
 //======================================================================================//
 
     ○● switch
-        ●
+        {
+            switch(a)
+            {
+                case 0: "0";
+                    break;
+                case 1: "1";
+                    break;
+                default: "df";
+            }
+        }
 
 //======================================================================================//
 
@@ -130,7 +189,39 @@
 //======================================================================================//
 
     ○● foreach forin forof do-while
-        ●
+        ● forEach: works for arrays. used when we want to perform some operations with array data
+        {
+            var a = [1,2,3,4,5,5,6,6,7];
+            a.forEach(function(val){
+                console.log(a+2);
+            });
+        }
+        ● forin: works for objects.  used when we want to perform some operations with objects
+        {
+            var obj = {
+                Name: "Hussnain", 
+                Age:27, 
+                City: "Faisalabad"
+            };
+
+            console.log(obj.Name);
+
+            for(var key in obj){
+                console.log(key,": ", obj[key]);
+                
+            }
+        }
+
+        ● do while: jab apko ek bar toh loop lazmi chalana ho toh do while works.
+        {
+            var a = 20;
+            do{
+                console.log("hey")
+                a++;
+            }
+            while(a<15);
+        }
+
 
 //======================================================================================//
 
@@ -165,15 +256,28 @@
 
 //======================================================================================//
 
-    ○● callback funcs
+    ○● callback funcs : This is in Async JS. promises, callbacks, set time out, set intervel, async awaite
+        ● Aisa code joh thori deer baad chaly ya chalana ho. is mey ek normal function hi hota ha but jab required time khatam ho toh ussay chala dety ha. or issi function koh call back func kahtay ha.
+        Example:
+        {
+            setTimeOut(function(){
+                console.log("I'm called after 2 seconds.")
+            }, 2000);
+        }
 
 //======================================================================================//    
 
     ○● what is first class functions
+        ● aisa function jis ko kisi value me store kery.
+        {
+            function abcd(a){
+                a();
+            }
 
+            abcd(function(){console.log("hey");});
+        }
 
 //======================================================================================//
-
 
     ○ Arrays
         ● to store more than one values in a single variable
@@ -230,14 +334,25 @@
 //======================================================================================//
 
     ○● how arrays are made behind the scences
+        ● arrays is JS stored as objects.
+        {
+            var a = [431,6,3,745];
+            arr = {
+                0: 431,
+                1: 6,
+                2: 3,
+                4: 745
+            };
+        }
+
+        so both typeof {}, and typeof [] both are objects.
+        then how we can know that it is array or not. use below way
+        -> Array.isArray([])
 
 //======================================================================================//
 
-    ○● why we can make negative indexes arrays in js?
-
-//======================================================================================//
-
-    ○● practice questions and scenarios
+    ○● how we can make negative indexes arrays in js?
+        ● arr[-1] = 5;
 
 //======================================================================================//
 
@@ -252,13 +367,13 @@
         2: filled object
         {
             var person = {
-                // here before : are properties like DOB, name...
+                // here before : are properties like DOB, name, etc. and age is a method/function
                 DOB: 24,
                 name: "Hussnain",
                 email: hussnainfareed@outlook.com,
                 linkedin: hussnainfareedDev,
                 phone: +923001903012,
-                age: function(){ return DOB-currentDate(); }
+                age: function(){ return DOB-currentDate(); }  // methods...
             }
 
             // how to access?
@@ -281,11 +396,7 @@
 //======================================================================================//
 
     ○● how to delete objects
-
-//======================================================================================//
-
-    ○● practice, questions, scenarios
-
+        ● delete obj.name;
 
 //======================================================================================//
 
