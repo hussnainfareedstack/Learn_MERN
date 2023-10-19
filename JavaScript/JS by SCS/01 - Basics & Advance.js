@@ -1,4 +1,6 @@
 
+// consider Readme.md file this file is for practice.
+
 /*//1 the difference between var let const
 var v = 2;
 const c = 2;

@@ -270,6 +270,8 @@
     ○● what is first class functions
         ● aisa function jis ko kisi value me store kery.
         {
+            var a = function(){};
+            // 2nd example:
             function abcd(a){
                 a();
             }
