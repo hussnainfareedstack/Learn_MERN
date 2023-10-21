@@ -1,15 +1,15 @@
 
 /* Topics:
-  Higher End Functions
-  Constructor Functions
-  first class functions
-  new Keyword
-  iife
-  prototype
-  prototypal inheritance
-  this call apply bind
-  pure and impure functions
-  closures.
+  ● Higher End Functions
+  ● Constructor Functions
+  ● first class functions
+  ● new Keyword
+  ● iife
+  ● prototype
+  ● prototypal inheritance
+  ● this call apply bind
+  ● pure and impure functions
+  ● closures.
 */
 
 /*// ○● Higher End Functions: 
@@ -133,16 +133,16 @@
 //      ● Global: window, function: window, method: object name(like obj). 
 //      ● Note: when a function is within an object it called as method.  
         {
-            // global
+            // global : this -> window
             console.log(this);
             
-            // function
+            // function : this -> window
             function abcd(){
                 console.log(this);
             }
             abcd();
             
-            // method
+            // method: this -> object name(obj) 
             var obj = { 
                 name: "Hussnain", 
                 specs: function(){console.log(this);} 
@@ -165,7 +165,7 @@
             }
         }
 
-//      ● call : agar ap function me kisi object koh pass ya point kerwana chahtay ho toh call use hota
+//      ● Call : agar ap function me kisi object koh pass ya point kerwana chahtay ho toh call use hota
             {
                 function abcd(){
                     console.log(this);
@@ -175,7 +175,7 @@
                 abcd.call(obj);
             }
 
-//      ● apply : there is minor difference just in calling function
+//      ● Apply : there is minor difference just in calling function vs "Call"
             {
                 function abcd(val1,val2,val3){
                     console.log(this, val1, val2, val3);
