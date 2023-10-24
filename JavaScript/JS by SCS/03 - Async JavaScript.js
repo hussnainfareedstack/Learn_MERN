@@ -51,7 +51,7 @@
             console.log("hey4");    //sync
         }
         // here main and side is not running at same time. But actually JS computing some part from main and then switch to side stack
-        // and compute its some part, and this switching moves too fast between two stacks but not ranning at same time. 
+        // and compute its some part, and this switching moves too fast between two stacks but not running at same time. 
         // now you understood that JS is single threaded/ or sync only.
 */
 
@@ -186,6 +186,44 @@
 
 
 
+// practice
+/*let x=10;
+
+const y=()=>{
+    console.log(x);
+                    //if x is not decalred or defined anywhere within the function then it will access outside x value,
+                    // otherwise inside. same as c++.
+    let x=20;
+    // var x=20;
+};
+y();
+*/
+
+//console.log(a); //for let it says cannot access a before initialization, but for var undefined 
+                    //because for var hoisting done, with initializing as ‘default’ value 
+                    //let and const : Hoisting is done, but not initialized (this is the reason for the error 
+                    //when we access the let variable before declaration/initialization
+//let a=10;
+
+//------------------------------------Hoisting var let const------------------------------------//
+
+//hoisting for var:
+//hoisting done, with initializing as ‘default’ value
+
+//hoisting for let and const:
+//Hoisting is done, but not initialized (this is the reason for the error 
+//when we access the let variable before declaration/initialization
+
+
+// Variables defined with let and const are hoisted to the top of the block, but not initialized.
+// Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+// Using a let variable before it is declared will result in a ReferenceError.
+// The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+//----------------------------Scope of var let const-------------------------------------------//
+
+//var: The scope of a var variable is functional scope.
+//let and const: The scope of a let and const variable is block scope.
 
 
 
