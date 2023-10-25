@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    background-color: lightseagreen;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 20rem;
+    height: 28rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 0.5rem; */
+    /* object-fit: contain; */
+    object-fit: cover;
+    object-position: center;
+    /* object-position: top; */
+    
+}
+.card i{
+    color: white;
+    font-size: 5rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* to make perfectly center do transform translate(-50%,-50%) */
+    transform: translate(-50%,-50%) scale(0); 
+    /* transform: scale(1); we cannot write transform seperately again, 
+    but we can write in already existing transform more properties */
+    opacity: 0;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+    /* transition-timing-function: overshoot used */
+}
