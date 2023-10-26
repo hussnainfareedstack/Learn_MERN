@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#container h1{
+    color: white;
+    font-size: 5vw;
+    font-weight: 600;
+    mix-blend-mode: difference;
+    
+}
+#cursor{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    
+    transform: translate(-50%,-50%) ;
+    transition: all ease-out 0.1s;
+    
+    /* transform: translate(-50%,-50%) ;
+    transition: transform .25s ease-in-out, opacity .1s; */
+    /* opacity: 0.5;
+    transition: opacity .3s,color .4s;
+    transform: translate(-50%,-50%) rotate(82.7592deg) scale(1.00002, 0.999981); */
+}
+
+
+
+
