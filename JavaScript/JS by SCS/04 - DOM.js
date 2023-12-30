@@ -23,7 +23,7 @@
 //            ● querySelector rgb(135, 133, 133)rgb(135, 133, 133)
 //                i)  document.querySelector("#id_name/.class_name/element") ; //select only fist 
 //                ii) document.querySelectorAll("#id_name/.class_name/element") ; //select many element and return nodeList
-//                iii)we need to use forEach method get access of each element of nodeList(set Of Many Element) ;
+//                iii)we need to use forEach method to get access of each element of nodeList(set Of Many Element) ;
 //                        elem.forEach(function(e){ //logic }) ; 
                     {
                         const v = document.querySelector("h1"); /* #title */

@@ -39,7 +39,7 @@
     ○● browser context API
         ● Browser context API gives mainly 3 things which are "window, stack, heap". window is described above. let discuss other 2.
     ○● stack
-        ● Simple first in last out. joh pehlay aye gha woh last me jayegha
+        ● Simple first in last out. joh pehlay aye gha woh last me jayegha. <--Wrong. Stack means here is static memory given by browser.
     ○● heap memory
         ● Jitna bhi data hota ha code ma yah intermediate data during code running, it saves in heap(dynamic) memory.
 
@@ -127,7 +127,16 @@
             var obj = {name: Hussnain, age:27};
             var copyObj = {...obj};             // but we have to use array brackets.
         }
+        ●● to copy objects we have 3 ways, 
+        1. Spread  
+        2. Object.assign();
+                 obj2= Object.assign({},obj1);
+        3. JSON.parse();
+                 JSON.parse(JSON.stringify(obj1));
 
+        // NOTE: Spread and object.assign() do Shallow copy for values while JSON do Deep Copy.
+        // like if we have object within a object then inside object is {} refernced value then it is shallow copied.
+        // for more details read at: https://www.javascripttutorial.net/object/3-ways-to-copy-objects-in-javascript/ 
 //======================================================================================//
 
     ○ conditional
@@ -337,8 +346,8 @@
 
 //======================================================================================//
 
-    ○● how arrays are made behind the scences
-        ● arrays is JS stored as objects.
+    ○● how arrays are made behind the scenes
+        ● arrays in JS stored as objects.
         {
             var a = [431,6,3,745];
             arr = {

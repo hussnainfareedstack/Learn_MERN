@@ -76,4 +76,27 @@ arr[-1] = 0;
 console.log(arr);
 */
 
-//
+//-----------------------------------------------------------------------//
+// Object Copy
+/*
+// let obj1 ={
+//     name: "Hussnain",
+//     age: "27"
+// };
+
+// var obj2={...obj1};  
+
+//to copy objects we have 3 ways, 
+// 1. Spread  
+// 2. Object.assign();
+//          obj2= Object.assign({},obj1);
+// 3. JSON.parse();
+//          JSON.parse(JSON.stringify(obj1));
+
+//NOTE: Spread and object.assign() do Shallow copy for values while JSON do Deep Copy.
+// like if we have object within a object then inside object is {} refernced value then it is shallow copied.
+
+// for more details read at: https://www.javascripttutorial.net/object/3-ways-to-copy-objects-in-javascript/ 
+*/
+
+//================================================================================================================
