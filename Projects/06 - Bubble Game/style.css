@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --primaryColor: rgb(144, 187, 144);
+    --secondryColor: rgb(55, 122, 55);
+}
+#main{
+    width: 100%;
+    height: 100%;
+    background-color:var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#panel{
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#panelHeader{
+    width: 100%;
+    height: 15%;
+    background-color: var(--secondryColor);
+    color: #fff;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0% 30%;
+}
+.elem{
+    margin: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.elem h4{
+    font-weight: 500;
+}
+
+.box{
+    margin: 10px;
+    padding: 5px 10px;
+
+    /* width: 30px;
+    height: 30px; */
+    border-radius: 5px;
+    color: var(--secondryColor);
+    font-weight: 700;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#panelBody{
+    width: 100%;
+    height: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondryColor);
+}
+.bubble{
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: var(--secondryColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bubble:hover{
+    background-color: rgb(34, 90, 34);
+    cursor: pointer;
+}
