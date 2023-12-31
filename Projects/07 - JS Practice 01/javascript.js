@@ -3,14 +3,14 @@ let rectangle = document.querySelector("#rectangle");
 
 rectangle.addEventListener("mousemove", function(dets){
 
-    let pos = Math.floor(dets.x - rectangle.getBoundingClientRect().left);
+    //let pos = Math.floor(dets.x - rectangle.getBoundingClientRect().left);
     
-    console.log("X: "+(pos%255));
+    console.log("X: "+(dets.offsetX));
 
-    if(pos < 255)
-        rectangle.style.backgroundColor = `rgb(0, 0, ${255-pos})`;
+    if(dets.offsetX < 255)//(pos < 255)
+        rectangle.style.backgroundColor = `rgb(0, 0, ${255 - dets.offsetX})`; //or use 255 - pos
     else
-        rectangle.style.backgroundColor = `rgb(${pos%255}, 0, 0)`;
+        rectangle.style.backgroundColor = `rgb(${dets.offsetX % 255}, 0, 0)`;
     
 });
 
