@@ -141,3 +141,9 @@
         }
 */
  
+
+// Also learn in JS recommended by Namaste Javascript
+// -> Optional Chaining
+// -> map, filter, reduce, sort
+// -> event bubbling
+// -> Asynchronous Events --> callbacks, callbacks hell, promises, promise APIs , async await , try catch
