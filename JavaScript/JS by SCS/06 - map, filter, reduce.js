@@ -104,10 +104,10 @@
 //   -> How many people with different ages like { 26: 2, 75: 1, 42: 1}
     {
         const users = [
-            {firstName: "Hussnain", lastName: "Fareed", age: 26},
-            {firstName: "Donald", lastName: "Trump", age: 75},
-            {firstName: "Elon", lastName: "Musk", age: 42},
-            {firstName: "Steve", lastName: "Jobs", age: 26}
+            {firstName: "Hussnain", lastName: "Fareed", age: 26, 11:1},
+            {firstName: "Donald", lastName: "Trump", age: 75, 11:0},
+            {firstName: "Elon", lastName: "Musk", age: 42, 11:0},
+            {firstName: "Steve", lastName: "Jobs", age: 26, 11:0}
         ];
 
         const output = users.reduce(function(acc, curr){
@@ -121,6 +121,7 @@
         }, {} );
         
         console.log(output);
+        //console.log(users[0]["age"])
     }
 */
 
@@ -140,6 +141,28 @@
 
     }
 */
+/* //HomeWork -> find first name of peoples whose age is less than 30 with reduce
+{
+    const users = [
+        {firstName: "Hussnain", lastName: "Fareed", age: 26},
+        {firstName: "Donald", lastName: "Trump", age: 75},
+        {firstName: "Elon", lastName: "Musk", age: 42},
+        {firstName: "Steve", lastName: "Jobs", age: 26}
+    ];
+
+    const output = users.reduce((names,curr)=>{
+        if(curr.age < 30){
+            names.push(curr.firstName);
+        }
+        return names;
+    },[])
+
+    console.log(output)
+
+}
+*/
+
+
 
 
 /*
