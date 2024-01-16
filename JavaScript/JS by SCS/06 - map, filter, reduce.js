@@ -30,7 +30,7 @@
             }
 */
 
-/*//   ● Array.filter()
+/*//  ● Array.filter()
 //         ○   used to filter array elements on custom requirments like get odd, even, /3 , less tha 4, negative, etc.
             {
                 const arr = [5 ,1, 3, 2, 6];
@@ -50,7 +50,7 @@
             }
 */
 
-//  ● Array.reduce()
+/*//  ● Array.reduce()
 //        ○   to process all the elements of array and give a single value
 //            -> let's find a sum of array with simple function to understand better
             {
@@ -79,8 +79,87 @@
                         prev = curr;
                     return prev;
                 },-1);
+
                 console.log(max);
             }
+
+*/
+
+/*//  ● Tricky map Example
+
+       {
+            const users = [
+                {firstName: "Hussnain", lastName: "Fareed", age: 26},
+                {firstName: "Donald", lastName: "Trump", age: 75},
+                {firstName: "Elon", lastName: "Musk", age: 42},
+                {firstName: "Steve", lastName: "Jobs", age: 53}
+            ];
+
+            const fullNames = users.map( x => x.firstName+" "+x.lastName );
+            console.log(fullNames);
+       }
+*/
+
+/*//  ● Tricky reduce Example
+//   -> How many people with different ages like { 26: 2, 75: 1, 42: 1}
+    {
+        const users = [
+            {firstName: "Hussnain", lastName: "Fareed", age: 26},
+            {firstName: "Donald", lastName: "Trump", age: 75},
+            {firstName: "Elon", lastName: "Musk", age: 42},
+            {firstName: "Steve", lastName: "Jobs", age: 26}
+        ];
+
+        const output = users.reduce(function(acc, curr){
+            if(acc[curr.age]){
+                acc[curr.age] = ++acc[curr.age];            // acc[curr.age] += 1; //same also
+            }
+            else{
+                acc[curr.age] = 1;
+            }
+            return acc;
+        }, {} );
+        
+        console.log(output);
+    }
+*/
+
+/*//  ● Tricky filter Example chaining   --HomeWork do this with reduce 
+//  -> find first name of peoples whose age is less than 30
+    {
+        const users = [
+            {firstName: "Hussnain", lastName: "Fareed", age: 26},
+            {firstName: "Donald", lastName: "Trump", age: 75},
+            {firstName: "Elon", lastName: "Musk", age: 42},
+            {firstName: "Steve", lastName: "Jobs", age: 26}
+        ];
+
+        const output = users.filter( x =>  x.age < 30 ).map(x => x.firstName);
+
+        console.log(output)
+
+    }
+*/
+
+
+/*
+@jagrutsharma9150
+1 year ago (edited)
+Things learned:
+1. map method is used when we want transformation of whole array.
+2. filter is used when we want to filter the arrar to obtain required value.
+3. reduce is used when we want to reduce the array to single value eg (max, min, avg, sum, difference etc).
+4. reduce passes two arguments one function(which includes accumulator and initial value as argument itself) and another initial value of accumulator.
+5. Homework:
+const output = user.reduce(function(acc, curr){
+    if (curr.age < 30){
+        acc.push(curr.firstName);
+    }
+    return acc;
+}, [ ])
+
+console.log(output);
+*/
 
 
 
