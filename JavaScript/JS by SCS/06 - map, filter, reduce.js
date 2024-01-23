@@ -163,8 +163,6 @@
 */
 
 
-
-
 /*
 @jagrutsharma9150
 1 year ago (edited)
@@ -183,7 +181,4 @@ const output = user.reduce(function(acc, curr){
 
 console.log(output);
 */
-
-
-
 
